@@ -1,0 +1,39 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+<!-- Будьте кибербезопасным! Не помещайте свой пароль в удалённый репозиторий! -->
+
+    <servers>
+        <server>
+            <id>release.repo</id>
+            <username>YOUR_SIGMA_LOGIN</username>
+            <password>YOUR_SIGMA_PASSWORD</password>
+         </server>
+         <server>
+             <id>snapshot.repo</id>
+             <username>YOUR_SIGMA_LOGIN</username>
+             <password>YOUR_SIGMA_PASSWORD</password>
+         </server>
+        <server>
+            <id>Nexus_PROD</id>
+            <username>${repo.username}</username>
+            <password>${repo.password}</password>
+        </server>
+         <server>
+             <id>internal</id>
+             <username>16726152</username>
+             <password>FuckYea22</password>
+         </server>
+     </servers>
+
+     <mirrors>
+         <mirror>
+             <id>internal</id>
+             <name>Mirror of central</name>
+             <url>http://sbtatlas.sigma.sbrf.ru/nexus/content/groups/internal</url>
+             <mirrorOf>*</mirrorOf>
+         </mirror>
+     </mirrors>
+ </settings>
